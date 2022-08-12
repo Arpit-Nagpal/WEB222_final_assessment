@@ -1,0 +1,502 @@
+/* 
+Name: Arpit Nagpal
+Student ID: 152047213
+Email: anagpal7@myseneca.ca 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input {
+  cursor: pointer;
+}
+
+.boton {
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(-45deg, #9925ea, #338aff, #9925ea);
+  background-size: 400%;
+  background-position: 90% 0;
+  color: #ffffff;
+  transition: background 0.8s;
+}
+
+.boton:hover {
+  background-position: 185% 50%;
+}
+
+.boton a {
+  color: #fff;
+  font-weight: 1000;
+}
+
+.boton i {
+  color: #fff;
+  font-weight: 800;
+}
+
+.head {
+  padding-top: 40px;
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #FFB4B4;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Menu */
+
+.menu {
+  overflow: hidden;
+  background-color: #0F0119;
+  position: fixed;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  z-index: 400;
+  right: 0;
+}
+
+.menu-item {
+  list-style: none;
+  display: inline-block;
+  padding: 15px 45px 15px 0;
+  position: relative;
+}
+
+.menu-link {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-item::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.menu-icon div {
+  display: block;
+  background-color: #FFF;
+  height: 2px;
+  width: 24px;
+  transition: 0.3s;
+}
+
+.menu-item:hover::after{
+  background: red;
+  width: 100%;
+}
+
+
+
+/* Home */
+.homepage {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(177, 64, 243, 0.3)),url(./Pictures/webd.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-content {
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1024px;
+  margin: auto;
+}
+
+@keyframes morph{
+  0%, 100% {border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;}
+  33% {border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;}
+  66% {border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;}
+}
+
+.blob {
+  overflow: hidden;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  background: #8f44fd
+  url("./Pictures/ArpitI.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: morph 3.75s linear infinite;
+}
+
+.home-words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-words h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #2C3333;
+}
+
+.home-words h2 {
+  font-size: 4.5rem;
+  line-height: 8rem;
+  color: #100720;
+}
+
+.home-words p {
+  font-size: 0.938rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: #61481C;
+  max-width: 800px;
+}
+
+.color {
+  color: #BDBDBD;
+}
+
+/* About Me */
+
+.aboutme {
+  background-image: url(./Pictures/about-bg.png);
+  padding: 30px;
+}
+
+.aboutme-all {
+  max-width: 1024px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.aboutme-span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ADEDEA;
+}
+
+.aboutme-details {
+  font-size: 1.2rem;
+  line-height: 2.6rem;
+  font-weight: 300;
+}
+
+.aboutme-details pre, span {
+  color: white;
+}
+
+.aboutme-text p {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+
+/* Education */
+
+.edu {
+  background-image: url(Pictures/education2.jpg);
+  height: 700px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */}
+
+.edu-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.edu-card {
+  width: 400px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  margin: 30px;
+  background: #1A4D2E;
+  border-radius: 0.4em;
+}
+
+.edu-card:hover {
+  transform: scale(1.05);
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.edu-card .uil {
+  font-size: 1.7rem;
+  color: #FFD9BA;
+  padding: 10px 18px;
+  border-radius: 50%;
+  border: 2px dashed;
+  border-color: #FFD9BA;
+}
+
+.edu-card h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: #18978F;
+}
+
+.edu-card p {
+  font-size: 0.9rem;
+  color: #DF7861;
+}
+
+/* Contact Me */
+
+label {
+  color: white;
+  font-weight: 600;
+}
+
+.contactme {
+  background-image: url(Pictures/contactme.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contactme-form {
+  max-width: 450px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contactme-form .format, .contactme-form textarea {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 15px;
+  color: #000;
+  background: #FFF;
+  border-radius: 0.4rem;
+}
+
+select option {
+  padding: 15px;
+  font-weight: 600;
+}
+
+select {
+  margin-bottom: 20px;
+}
+
+form .boton {
+  margin-bottom: 5px;
+}
+
+#problem pre {
+  color: #DF4759;
+  margin-bottom: 20px;
+  font-weight: 200;
+  padding: 0 15px;
+}
+
+#problem {
+  background: #0F0119;
+  margin-bottom: 20px;
+}
+
+#problem h3 {
+  color: #FFC18F;
+  margin-bottom: 20px;
+  padding: 15px 15px 0 15px;
+}
+
+/* Honesty */
+
+.footer {
+  background: #0F0119;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  color: #FFC18F;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer p {
+  color: #ADEDEA;
+  margin-bottom: 20px;
+}
+
+.footer p span {
+  color: #cf11bc;
+  font-weight: 600;
+}
+
+.icons .fa {
+  font-size: 30px;
+  color: #19cedb;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px;
+}
+
+.icons .fa:hover {
+  color: #c4e64a;
+  transition: 0.6s;
+}
+
+/* To make website responsive  */
+@media (max-width: 300px) {
+  .home-text h3 {
+      font-size: 1.3rem;
+  }
+
+  .home-text h2 {
+      font-size: 4rem;
+      line-height: 6rem;
+  }
+
+  .home-text p {
+      font-size: 0.75rem;
+  }
+
+  .about-content {
+      grid-template-columns: 1fr;
+  }
+
+  .heading {
+      font-size: 4rem;
+  }
+}
+.menu-icon {
+  display: flex;
+  position: fixed;
+  float: left;
+  padding: 20px;
+  background-color: #0F0119;
+}
+
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #0F0119;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  z-index: 300;
+}
+
+  .menu-icon {
+    display: flex;
+    position: fixed;
+    float: left;
+    padding: 20px;
+    background-color: #0F0119;
+}
+
+.open-menu {
+  right: 0;
+  transition: 0.5s;
+}
+
+.nav-link {
+  display: block;
+  margin: 1rem 0;
+}
+
+@media (max-width: 300px) {
+
+ .honesty p {
+      font-size: 0.5rem;
+  }
+
+  .home-text h3 {
+    font-size: 1.2rem;
+}
+
+.home-text h2 {
+    font-size: 2.3rem;
+    line-height: 3.2rem;
+}
+
+.home-text p {
+    font-size: 0.5rem;
+}
+
+.about-content {
+    grid-template-columns: 1fr;
+}
+
+.heading {
+    font-size: 3.2rem;
+}
+
+  .about-details pre {
+      font-size: 0.9rem;
+  }
+  
+  .honesty span {
+      font-size: 1.5rem;
+  }
+}
